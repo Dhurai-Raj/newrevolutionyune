@@ -1,0 +1,23 @@
+name = "royaltune-backend"
+main = "src/index.ts"
+compatibility_date = "2024-02-22"
+
+[vars]
+JWT_SECRET = "super-secret-royaltune-jwt-key"
+STRIPE_API_KEY = "sk_test_mock"
+STRIPE_WEBHOOK_SECRET = "whsec_mock"
+FRONTEND_URL = "http://localhost:5173"
+
+[[kv_namespaces]]
+binding = "ROYALTUNE_KV"
+id = "royaltune_kv_local"
+
+[[r2_buckets]]
+binding = "ROYALTUNE_BUCKET"
+bucket_name = "royaltune-bucket"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "royaltune-db"
+database_id = "royaltune-db-local"
+migrations_dir = "../migrations"
